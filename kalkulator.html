@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator</title>
+    <link  rel = "stylesheet" href="kalku.css">
+</head>
+<body>
+    <h1>Kalkulator Tambah/Kurang</h1>
+    <p>Bilangan 1 <input number="number" id="bilangan1"></p> 
+    <p>Bilangan 2 <input number="number" id="bilangan2"></p>
+    <button onclick="tambah()">TAMBAH</button>
+    <button onclick="kurang()">KURANG</button>
+    <p>Hasil <span id="hasil"></span></p>
+
+    <div id="penjumlahan"></div>
+    <div id="pengurangan"></div>
+    
+    <script>
+        function tambah(){
+            var bilangan1 = parseInt(document.getElementById('bilangan1').value);
+            var bilangan2 = parseInt(document.getElementById('bilangan2').value);
+            var penjumlahan = bilangan1 + bilangan2;
+            document.getElementById("hasil").innerHTML = penjumlahan;
+        }
+        function kurang(){
+            var bilangan1 = parseInt(document.getElementById('bilangan1').value);
+            var bilangan2 = parseInt(document.getElementById('bilangan2').value);
+            var pengurangan = bilangan1 - bilangan2;
+            document.getElementById("hasil").innerHTML = pengurangan;
+        }
+    </script>
+</body>
+</html>
